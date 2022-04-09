@@ -1,3 +1,8 @@
 {
-  "hello": "Hello"
+  "back": "Back",
+  "hello": "Hello",
+  "instance": {
+    "control": "Manage Instance"
+  },
+  "user": "user"
 }
