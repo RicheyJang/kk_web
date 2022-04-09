@@ -1,18 +1,17 @@
 <template>
   <el-config-provider :locale="elLocale">
-    <base-container v-if="isLogin"></base-container>
+    <router-view></router-view>
   </el-config-provider>
 </template>
 
 <script setup>
-import BaseContainer from './components/common/BaseContainer.vue'
 import { computed,ref,onMounted,watch } from 'vue';
 import { useStore } from 'vuex';
 import { useI18n } from 'vue-i18n';
 
 // 语种列表
 import zhCn from 'element-plus/lib/locale/lang/zh-cn'
-import enUS from "element-plus/lib/locale/lang/en";
+import enUS from 'element-plus/lib/locale/lang/en';
 
 // 切换语言
 let elLocale = ref(zhCn)
