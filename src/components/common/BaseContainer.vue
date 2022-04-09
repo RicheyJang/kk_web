@@ -1,15 +1,19 @@
 <template>
-  <el-container>
+  <el-container style="width: 100%;">
     <el-header class="main-header">
       <!--左侧-->
-      <div class="toolbar" style="left: 0;">
+      <div class="menubar" style="left: 0;">
         <slot name="left">
           <el-button @click="goBack()">{{t('back')}}</el-button>
         </slot>
       </div>
+
+      <div class="menubar title">
+        <slot name="title"></slot>
+      </div>
       
       <!--右侧-->
-      <div class="toolbar" style="right: 0;">
+      <div class="menubar" style="right: 0;">
         <el-dropdown @command="handleSelectLang">
             <i class="el-icon translate-icon el-tooltip__trigger">
               <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" width="1.2em" height="1.2em">
@@ -29,9 +33,9 @@
       </div>
     </el-header>
 
-    <el-divider style="margin: 0;" />
+    <el-divider class="main-header-divider" />
 
-    <el-main>
+    <el-main style="width: 80%; text-align: center; margin: 0 auto;">
       <slot></slot>
     </el-main>
 
@@ -57,15 +61,34 @@ function handleSelectLang(lang) {
 
 <style scoped>
 .main-header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 50;
+
   align-self: center;
-  position: relative;
   width: 85vw;
 }
 
-.main-header .toolbar {
+.main-header-divider {
+  margin: 0;
+  position: sticky;
+  top: 60px;
+  z-index: 50;
+}
+
+.main-header .menubar {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.main-header .title {
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) !important;
+
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .translate-icon {

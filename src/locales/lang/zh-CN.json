@@ -4,5 +4,11 @@
   "instance": {
     "control": "管理实例"
   },
+  "key": {
+    "empty": "暂无密钥"
+  },
+  "title": {
+    "allKey": "所有密钥"
+  },
   "user": "用户"
 }
