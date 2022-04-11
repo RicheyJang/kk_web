@@ -1,8 +1,33 @@
 {
   "back": "Back",
+  "confirm": "OK",
+  "error": {
+    "loginFailed": "Login failed",
+    "loginTimeout": "Login timed out",
+    "needLogin": "The login information has timed out and needs to log in again",
+    "permission": "Insufficient permissions",
+    "unknown": "unknown mistake",
+    "userFrozen": "The user has been frozen",
+    "wrongPasswd": "Wrong user name or password"
+  },
   "hello": "Hello",
+  "holder": {
+    "password": "Please enter password",
+    "username": "Please enter username"
+  },
   "instance": {
     "control": "Manage Instance"
+  },
+  "key": {
+    "empty": "No key yet"
+  },
+  "label": {
+    "password": "password",
+    "username": "username"
+  },
+  "login": "Login",
+  "title": {
+    "allKey": "All Keys"
   },
   "user": "user"
 }

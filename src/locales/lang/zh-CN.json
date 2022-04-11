@@ -1,12 +1,31 @@
 {
   "back": "返回",
+  "confirm": "确定",
+  "error": {
+    "loginFailed": "登录失败",
+    "loginTimeout": "登录超时",
+    "needLogin": "登录信息超时，需要重新登录",
+    "permission": "权限不足",
+    "unknown": "未知错误",
+    "userFrozen": "当前用户已被冻结",
+    "wrongPasswd": "用户名或密码错误"
+  },
   "hello": "你好",
+  "holder": {
+    "password": "请输入密码",
+    "username": "请输入用户名"
+  },
   "instance": {
     "control": "管理实例"
   },
   "key": {
     "empty": "暂无密钥"
   },
+  "label": {
+    "password": "密码",
+    "username": "用户名"
+  },
+  "login": "登录",
   "title": {
     "allKey": "所有密钥"
   },

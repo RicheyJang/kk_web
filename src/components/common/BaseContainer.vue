@@ -28,7 +28,7 @@
             </template>
           </el-dropdown>
         <slot name="right">
-          <span style="margin-left: 20px;">{{t('user')}}</span>
+          <span style="margin-left: 20px;">{{username}}</span>
         </slot>
       </div>
     </el-header>
@@ -46,9 +46,18 @@
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { useStore } from 'vuex';
+import { computed } from 'vue';
 const { t } = useI18n();
 const router = useRouter();
 const store = useStore();
+
+const username = computed(() => {
+  if(store.state.username.length > 0) {
+    return store.state.username
+  } else {
+    return t('user')
+  }
+});
 
 function goBack() {
   router.go(-1);
