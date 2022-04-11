@@ -1,6 +1,11 @@
 {
   "back": "返回",
   "confirm": "确定",
+  "empty": {
+    "default": "暂无数据",
+    "instance": "暂无实例",
+    "key": "暂无密钥"
+  },
   "error": {
     "loginFailed": "登录失败",
     "loginTimeout": "登录超时",
@@ -18,15 +23,13 @@
   "instance": {
     "control": "管理实例"
   },
-  "key": {
-    "empty": "暂无密钥"
-  },
   "label": {
     "password": "密码",
     "username": "用户名"
   },
   "login": "登录",
   "title": {
+    "allIncetance": "所有实例",
     "allKey": "所有密钥"
   },
   "user": "用户"

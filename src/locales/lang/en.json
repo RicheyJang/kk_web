@@ -18,9 +18,6 @@
   "instance": {
     "control": "Manage Instance"
   },
-  "key": {
-    "empty": "No key yet"
-  },
   "label": {
     "password": "password",
     "username": "username"

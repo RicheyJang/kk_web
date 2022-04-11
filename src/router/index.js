@@ -9,6 +9,11 @@ const routes = [
         component: KeyManage
     },
     {
+        path: '/instance',
+        name: 'Instance',
+        component: () => import('../pages/InstanceManage.vue')
+    },
+    {
         path: '/login',
         name: 'Login',
         component: () => import('../pages/Login.vue')

@@ -1,8 +1,5 @@
 <template>
   <base-container>
-    <template #left>
-      <instance-select></instance-select>
-    </template>
     <template #title>{{title}}</template>
 
     <!--新增按钮-->
@@ -10,7 +7,7 @@
       <el-button :icon="Plus" plain size="large" class="add-button"/>
     </el-row>
     <!--中央表格-->
-    <base-table class="key-table" :page="page" :table-data="keyTable" :empty="t('empty.key')">
+    <base-table class="instance-table" :page="page" :table-data="instanceTable" :empty="t('empty.instance')">
       <el-table-column prop="date" label="Date" />
       <el-table-column prop="name" label="Name" />
       <el-table-column prop="address" label="Address" />
@@ -21,7 +18,6 @@
 
 <script setup>
 import BaseContainer from '../components/common/BaseContainer.vue'
-import InstanceSelect from '../components/instance/InstanceSelect.vue';
 import BaseTable from '../components/common/BaseTable.vue';
 import { reactive } from 'vue';
 import { Plus } from '@element-plus/icons-vue'
@@ -30,14 +26,14 @@ import { useI18n } from 'vue-i18n';
 const { t } = useI18n()
 
 const title = computed(() => {
-  return t('title.allKey')
+  return t('title.allIncetance')
 })
 const page = reactive({
   current: 1,
   total: 0,
   size: 10
 })
-const keyTable = reactive([])
+const instanceTable = reactive([])
 
 // TODO 请求后端接口
 </script>
@@ -47,7 +43,7 @@ const keyTable = reactive([])
   margin-top: 2vh;
 }
 
-.key-table {
+.instance-table {
   margin: 3vh auto 0;
 }
 </style>
