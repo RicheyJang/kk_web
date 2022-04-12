@@ -36,7 +36,7 @@
               <el-dropdown-menu>
                 <el-dropdown-item @click="handleLogout">{{t('user.logout')}}</el-dropdown-item>
                 <el-dropdown-item @click="handleChangePasswd">{{t('user.password')}}</el-dropdown-item>
-                <el-dropdown-item v-if="store.state.level >= UserLevelRoot" divided @click="handleClickManageUser">{{t('user.control')}}</el-dropdown-item>
+                <el-dropdown-item v-if="store.state.level >= UserLevelAdmin" divided @click="handleClickManageUser">{{t('user.control')}}</el-dropdown-item>
               </el-dropdown-menu>
             </template>
           </el-dropdown>
@@ -54,7 +54,7 @@
 </template>
 
 <script setup>
-import { UserLevelRoot } from '../../api/user';
+import { UserLevelAdmin } from '../../api/user';
 import { ArrowDown } from '@element-plus/icons-vue'
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';

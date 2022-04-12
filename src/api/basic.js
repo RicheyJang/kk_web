@@ -2,7 +2,6 @@ import axios from 'axios';
 import store from '../store/index';
 import i18n from '../locales/i18n';
 import router from '../router/index';
-import { ElMessageBox } from 'element-plus'
 
 const service = axios.create({ // 生成一个axios实例
   timeout: 5000, // 请求超时时间
@@ -28,6 +27,7 @@ export const CodePermission  = 10003
 export const CodeWrongPasswd = 10004
 export const CodeUserFrozen  = 10005
 export const CodeNeedLogin   = 10006
+export const CodeUserExist   = 10007
 
 function getMsgByCode(code) {
   switch(code) {
@@ -37,6 +37,8 @@ function getMsgByCode(code) {
       return i18n.global.t('error.wrongPasswd')
     case CodeUserFrozen:
       return i18n.global.t('error.userFrozen')
+    case CodeUserExist:
+      return i18n.global.t('error.userExist')
     case CodeNeedLogin:
       ElMessageBox.alert(i18n.global.t('error.needLogin'), i18n.global.t('error.loginTimeout'), {
         confirmButtonText: i18n.global.t('confirm'),
@@ -48,8 +50,9 @@ function getMsgByCode(code) {
         },
       })
       return i18n.global.t('error.needLogin')
+    default:
+      return i18n.global.t('error.unknown')
   }
-  return i18n.global.t('error.unknown')
 }
 
 // 响应拦截器

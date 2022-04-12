@@ -1,12 +1,17 @@
 {
   "back": "返回",
+  "cancel": "取消",
   "change": "修改",
   "confirm": "确定",
+  "delete": "删除",
+  "disable": "禁用",
   "empty": {
     "default": "暂无数据",
     "instance": "暂无实例",
-    "key": "暂无密钥"
+    "key": "暂无密钥",
+    "user": "暂无用户"
   },
+  "enable": "启用",
   "error": {
     "loginFailed": "登录失败",
     "loginTimeout": "登录超时",
@@ -15,11 +20,13 @@
     "permission": "权限不足",
     "sameOldPasswd": "请勿与旧密码一致",
     "unknown": "未知错误",
+    "userExist": "该用户名已存在",
     "userFrozen": "当前用户已被冻结",
     "wrongPasswd": "用户名或密码错误"
   },
   "hello": "你好",
   "holder": {
+    "level": "请选择权限等级",
     "password": "请输入密码",
     "passwordAgain": "请再次输入新密码",
     "username": "请输入用户名"
@@ -29,24 +36,43 @@
   },
   "label": {
     "again": "再次输入",
+    "createTime": "创建时间",
+    "frozen": "冻结",
+    "lastIP": "上次登录IP",
+    "lastLogin": "上次登录时间",
+    "level": "权限",
     "newPassword": "新密码",
+    "normal": "正常",
     "oldPassword": "旧密码",
     "password": "密码",
+    "status": "状态",
     "username": "用户名"
   },
   "login": "登录",
   "tip": {
-    "successChange": "修改成功"
+    "confirmDeleteUser": "确定删除该用户？此操作不可逆！",
+    "confirmDisableUser": "确定禁用该用户？这将一并冻结该用户所有的专属实例",
+    "confirmEnableUser": "确定启用该用户？",
+    "successChange": "修改成功",
+    "successDelete": "删除成功"
   },
   "title": {
     "allIncetance": "所有实例",
     "allKey": "所有密钥",
-    "changePasswd": "修改密码"
+    "allUser": "所有用户",
+    "changePasswd": "修改密码",
+    "newUser": "新建用户",
+    "warning": "警告"
   },
   "user": {
+    "admin": "管理员",
     "control": "用户管理",
+    "general": "普通用户",
     "logout": "注销",
     "name": "用户",
-    "password": "修改密码"
+    "password": "修改密码",
+    "resetPassword": "重置密码",
+    "root": "root",
+    "setLevel": "设置权限"
   }
 }

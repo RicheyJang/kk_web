@@ -58,4 +58,9 @@ html, body {
   width: 100%;
   height: 100%;
 }
+
+.el-dialog__body {
+  display: flex;
+  justify-content: center;
+}
 </style>

@@ -10,14 +10,14 @@
     <!--分页器-->
     <el-row justify="center">
       <el-pagination
-        v-model:currentPage="page.current"
-        v-model:page-size="page.size"
+        :currentPage="page.current"
+        @update:currentPage="handleCurrentChange"
+        :page-size="page.size"
         :background="false"
         layout="total, prev, pager, next, jumper"
         :total="page.total"
         hide-on-single-page
         style="justify-content: center; margin-top: 10px;"
-        @current-change="handleCurrentChange"
       />
     </el-row>
   </div>
@@ -47,7 +47,7 @@ const props = defineProps({
     type: String
   }
 })
-const emit = defineEmits('current-change')
+const emit = defineEmits(['current-change'])
 
 function handleCurrentChange(val) {
   emit('current-change', val)
