@@ -56,9 +56,10 @@ function onSubmit() {
       // 成功
       login(FormDatas.username, FormDatas.password).then(response => {
         //登录成功
+        store.commit('setLevel', response.data['data'].level)
         store.commit('setUsername', response.data['data'].username)
-        store.commit('setToken', response.data['data'].token);
-        router.replace({path: '/'});
+        store.commit('setToken', response.data['data'].token)
+        router.replace({path: '/'})
       }).catch(error => {
         console.log(t('error.loginFailed'), error.data.msg)
         loginTip.value = error.data.msg

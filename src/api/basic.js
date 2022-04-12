@@ -41,7 +41,6 @@ function getMsgByCode(code) {
       ElMessageBox.alert(i18n.global.t('error.needLogin'), i18n.global.t('error.loginTimeout'), {
         confirmButtonText: i18n.global.t('confirm'),
         callback: action => {
-          store.commit('setUsername', '')
           store.commit('setToken', '')
           router.replace({
             name: 'Login'

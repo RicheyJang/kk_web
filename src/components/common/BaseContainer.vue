@@ -28,7 +28,18 @@
             </template>
           </el-dropdown>
         <slot name="right">
-          <span style="margin-left: 20px;">{{username}}</span>
+          <el-dropdown>
+            <span class="el-dropdown-link user-name" style="margin-left: 20px;">
+              {{username}}<el-icon class="el-icon--right" style="transform: translateY(15%)"><arrow-down /></el-icon>
+            </span>
+            <template #dropdown>
+              <el-dropdown-menu>
+                <el-dropdown-item @click="handleLogout">{{t('user.logout')}}</el-dropdown-item>
+                <el-dropdown-item @click="handleChangePasswd">{{t('user.password')}}</el-dropdown-item>
+                <el-dropdown-item v-if="store.state.level >= UserLevelRoot" divided @click="handleClickManageUser">{{t('user.control')}}</el-dropdown-item>
+              </el-dropdown-menu>
+            </template>
+          </el-dropdown>
         </slot>
       </div>
     </el-header>
@@ -43,21 +54,17 @@
 </template>
 
 <script setup>
+import { UserLevelRoot } from '../../api/user';
+import { ArrowDown } from '@element-plus/icons-vue'
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { useStore } from 'vuex';
 import { computed } from 'vue';
+import { logout } from '../../api/user';
+
 const { t } = useI18n();
 const router = useRouter();
 const store = useStore();
-
-const username = computed(() => {
-  if(store.state.username.length > 0) {
-    return store.state.username
-  } else {
-    return t('user')
-  }
-});
 
 function goBack() {
   router.go(-1);
@@ -65,6 +72,37 @@ function goBack() {
 
 function handleSelectLang(lang) {
   store.commit('changeLocale', lang)
+}
+
+// 用户相关操作
+
+const username = computed(() => {
+  if(store.state.username.length > 0) {
+    return store.state.username
+  } else {
+    return t('user.name')
+  }
+});
+
+function handleLogout() {
+  logout().then(response => {}).catch(error => {}).finally(() => {
+    store.commit('setToken', '');
+    router.replace({
+      name: 'Login'
+    });
+  });
+}
+
+function handleChangePasswd() {
+  router.push({
+    name: 'ChangePassword'
+  });
+}
+
+function handleClickManageUser() {
+  router.push({
+    name: 'User'
+  });
 }
 </script>
 
@@ -97,6 +135,12 @@ function handleSelectLang(lang) {
   transform: translateX(-50%) translateY(-50%) !important;
 
   font-size: 20px;
+  font-weight: 500;
+}
+
+.main-header .user-name {
+  cursor: pointer;
+  font-size: 18px;
   font-weight: 500;
 }
 

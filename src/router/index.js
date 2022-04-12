@@ -17,6 +17,11 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: () => import('../pages/Login.vue')
+    },
+    {
+        path: '/password',
+        name: 'ChangePassword',
+        component: () => import('../pages/ChangePassword.vue')
     }
     // {   // 404 页面
     //     path: '/:pathMatch(.*)*',

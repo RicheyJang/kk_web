@@ -26,5 +26,7 @@
   "title": {
     "allKey": "All Keys"
   },
-  "user": "user"
+  "user": {
+    "name": "user"
+  }
 }
