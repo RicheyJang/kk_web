@@ -1,17 +1,22 @@
 import {createRouter, createWebHistory} from "vue-router";
-import KeyManage from "../pages/KeyManage.vue"
+import InstanceManage from "../pages/InstanceManage.vue";
+import KeyManage from "../pages/KeyManage.vue";
 import store from "../store/index";
 
 const routes = [
     {
         path: '/',
-        name: 'KeyManage',
+        redirect: '/instance'
+    },
+    {
+        path: '/keys/:instance',
+        name: 'Keys',
         component: KeyManage
     },
     {
         path: '/instance',
         name: 'Instance',
-        component: () => import('../pages/InstanceManage.vue')
+        component: InstanceManage
     },
     {
         path: '/user',

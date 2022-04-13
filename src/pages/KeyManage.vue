@@ -1,7 +1,7 @@
 <template>
   <base-container>
     <template #left>
-      <instance-select></instance-select>
+      <instance-select :current-instance="identifier" :instances="store.state.instances"></instance-select>
     </template>
     <template #title>{{title}}</template>
 
@@ -23,15 +23,21 @@
 import BaseContainer from '../components/common/BaseContainer.vue'
 import InstanceSelect from '../components/instance/InstanceSelect.vue';
 import BaseTable from '../components/common/BaseTable.vue';
-import { reactive } from 'vue';
+import { onMounted, ref, reactive, watch } from 'vue';
 import { Plus } from '@element-plus/icons-vue'
 import { computed } from '@vue/reactivity';
 import { useI18n } from 'vue-i18n';
+import { useStore } from 'vuex';
+import { useRoute } from 'vue-router';
+
+const route = useRoute()
+const store = useStore()
 const { t } = useI18n()
 
 const title = computed(() => {
   return t('title.allKey')
 })
+const identifier = ref('')
 const page = reactive({
   current: 1,
   total: 0,
@@ -39,7 +45,20 @@ const page = reactive({
 })
 const keyTable = reactive([])
 
-// TODO 请求后端接口
+// 初始化
+onMounted(()=>{
+  store.dispatch('flushInstances')
+  flushKeys()
+})
+watch(()=>route.params, (toParams, previousParams) => {
+  flushKeys()
+})
+
+// 获取所有密钥
+function flushKeys() {
+  identifier.value = route.params.instance
+  // TODO 请求后端接口
+}
 </script>
 
 <style scoped>

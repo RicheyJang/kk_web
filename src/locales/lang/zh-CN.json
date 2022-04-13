@@ -4,6 +4,7 @@
   "change": "修改",
   "confirm": "确定",
   "delete": "删除",
+  "destroy": "销毁",
   "disable": "禁用",
   "empty": {
     "default": "暂无数据",
@@ -24,6 +25,7 @@
     "userFrozen": "当前用户已被冻结",
     "wrongPasswd": "用户名或密码错误"
   },
+  "freeze": "冻结",
   "hello": "你好",
   "holder": {
     "level": "请选择权限等级",
@@ -32,19 +34,27 @@
     "username": "请输入用户名"
   },
   "instance": {
-    "control": "管理实例"
+    "control": "管理实例",
+    "manageKeys": "管理密钥"
   },
   "label": {
+    "IPs": "放行IP",
     "again": "再次输入",
     "createTime": "创建时间",
     "frozen": "冻结",
+    "identifier": "标识",
+    "instance": "实例",
+    "keeper": "密钥保管器",
     "lastIP": "上次登录IP",
     "lastLogin": "上次登录时间",
     "level": "权限",
     "newPassword": "新密码",
     "normal": "正常",
     "oldPassword": "旧密码",
+    "owner": "管理者",
+    "ownerID": "管理用户ID",
     "password": "密码",
+    "safeLevel": "默认安全级别",
     "status": "状态",
     "username": "用户名"
   },

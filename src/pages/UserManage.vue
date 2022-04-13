@@ -1,8 +1,5 @@
 <template>
   <base-container v-loading.fullscreen.lock="loading">
-    <template #left>
-      <instance-select></instance-select>
-    </template>
     <template #title>{{title}}</template>
 
     <!--新增按钮-->
@@ -97,7 +94,6 @@ import { getUsers, addUser, freezeUser, resetPassword, deleteUser, setUserLevel,
  UserLevelGeneral, UserLevelAdmin, UserLevelRoot } from '../api/user'
 import { serverTimeToDisplay } from '../api/utils'
 import BaseContainer from '../components/common/BaseContainer.vue'
-import InstanceSelect from '../components/instance/InstanceSelect.vue';
 import BaseTable from '../components/common/BaseTable.vue';
 import { onMounted, ref, reactive } from 'vue';
 import { Plus } from '@element-plus/icons-vue'
