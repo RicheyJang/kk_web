@@ -14,7 +14,7 @@
       <el-table-column prop="identifier" :label="t('label.identifier')" />
       <el-table-column prop="status" :label="t('label.status')" />
       <el-table-column prop="keeper" :label="t('label.keeper')" />
-      <el-table-column prop="users" :label="t('label.ownerID')" v-if="store.state.level === UserLevelRoot"/>
+      <el-table-column prop="users" :label="t('label.ownerID')" v-if="store.state.level == UserLevelRoot"/>
       <el-table-column prop="levelText" :label="t('label.safeLevel')" />
       <!--<el-table-column prop="ips" :label="t('label.IPs')" />-->
       <el-table-column prop="createTime" :label="t('label.createTime')" />
