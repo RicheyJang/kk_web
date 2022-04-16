@@ -1,6 +1,10 @@
 <template>
   <el-config-provider :locale="elLocale">
-    <router-view></router-view>
+    <router-view v-slot="{ Component }">
+      <transition name="view-component-fade" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </el-config-provider>
 </template>
 
@@ -62,5 +66,16 @@ html, body {
 .el-dialog__body {
   display: flex;
   justify-content: center;
+}
+
+/* 动画过渡 */
+.view-component-fade-enter-active,
+.view-component-fade-leave-active {
+  transition: opacity 0.25s ease-in-out;
+}
+
+.view-component-fade-enter-from,
+.view-component-fade-leave-to {
+  opacity: 0;
 }
 </style>

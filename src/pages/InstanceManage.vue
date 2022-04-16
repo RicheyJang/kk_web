@@ -1,6 +1,6 @@
 <template>
+<div>
   <base-container v-loading.fullscreen.lock="loading">
-    <template #left><span> </span></template>
     <template #title>{{title}}</template>
 
     <!--新增按钮-->
@@ -74,6 +74,7 @@
   </el-dialog>
   <!--新增实例表单 over-->
 
+</div>
 </template>
 
 <script setup>

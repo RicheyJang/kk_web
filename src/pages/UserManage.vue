@@ -1,4 +1,5 @@
 <template>
+<div>
   <base-container v-loading.fullscreen.lock="loading">
     <template #title>{{title}}</template>
 
@@ -27,7 +28,7 @@
             <template #dropdown>
               <el-dropdown-menu>
                 <el-dropdown-item @click="handleFreeze(scope.row)">{{scope.row.isFrozen? t('enable') : t('disable')}}</el-dropdown-item>
-                <el-dropdown-item @click="handleResetPasswd(scope.row)">{{t('user.resetPassword')}}</el-dropdown-item>
+                <el-dropdown-item @click="handleResetPasswd(scope.row)" v-if="store.state.level >= UserLevelRoot">{{t('user.resetPassword')}}</el-dropdown-item>
                 <el-dropdown-item @click="handleSetLevel(scope.row)" v-if="store.state.level >= UserLevelRoot">{{t('user.setLevel')}}</el-dropdown-item>
                 <el-dropdown-item @click="handleDelUser(scope.row)" divided v-if="store.state.level >= UserLevelRoot">{{t('delete')}}</el-dropdown-item>
               </el-dropdown-menu>
@@ -86,6 +87,7 @@
     </template>
   </el-dialog>
   <!--新增用户表单 over-->
+</div>
 </template>
 
 <script setup>

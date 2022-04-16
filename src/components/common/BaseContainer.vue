@@ -4,7 +4,7 @@
       <!--左侧-->
       <div class="menubar" style="left: 0;">
         <slot name="left">
-          <el-button @click="goBack()">{{t('back')}}</el-button>
+          <el-button @click="goBack()" v-if="canBack">{{t('back')}}</el-button>
         </slot>
       </div>
 
@@ -65,6 +65,10 @@ import { logout } from '../../api/user';
 const { t } = useI18n();
 const router = useRouter();
 const store = useStore();
+
+const canBack = computed(() => {
+  return window.history.length > 1;
+});
 
 function goBack() {
   router.go(-1);
