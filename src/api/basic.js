@@ -28,9 +28,14 @@ export const CodeWrongPasswd = 10004
 export const CodeUserFrozen  = 10005
 export const CodeNeedLogin   = 10006
 export const CodeUserExist   = 10007
+export const CodeInstanceExist = 10008
 
 function getMsgByCode(code) {
   switch(code) {
+    case 404:
+      return i18n.global.t('error.server')
+    case 500:
+      return i18n.global.t('error.server')
     case CodePermission:
       return i18n.global.t('error.permission')
     case CodeWrongPasswd:
@@ -39,6 +44,8 @@ function getMsgByCode(code) {
       return i18n.global.t('error.userFrozen')
     case CodeUserExist:
       return i18n.global.t('error.userExist')
+    case CodeInstanceExist:
+      return i18n.global.t('error.instanceExist')
     case CodeNeedLogin:
       ElMessageBox.alert(i18n.global.t('error.needLogin'), i18n.global.t('error.loginTimeout'), {
         confirmButtonText: i18n.global.t('confirm'),
@@ -62,7 +69,13 @@ service.interceptors.response.use(response => {
 }, error => {
   let rsp;
   if (error.response) { // 有回包，但响应码不是2XX
-    rsp = error.response;
+    rsp = error.response
+    if (typeof rsp.data != 'object') {
+      rsp.data = {
+        code: +rsp.status,
+        msg: rsp.data
+      }
+    }
   } else if (error.request) { // 没有回包
     rsp = {
       request: error.request,

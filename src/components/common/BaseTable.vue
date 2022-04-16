@@ -2,7 +2,7 @@
   <div>
     <!--中央表格-->
     <el-row justify="center">
-      <el-empty v-if="tableData.length === 0" :description="empty.length !== 0? empty : t('empty.default')"/>
+      <el-empty v-if="tableData == null || tableData.length === 0" :description="empty.length !== 0? empty : t('empty.default')"/>
       <el-table v-else :data="tableData" stripe class="base-table">
         <slot></slot>
       </el-table>
@@ -31,7 +31,6 @@ const props = defineProps({
   tableData: {
     default: [],
     type: Array,
-    required: true
   },
   page: {
     default: {

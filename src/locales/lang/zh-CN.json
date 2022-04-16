@@ -14,12 +14,14 @@
   },
   "enable": "启用",
   "error": {
+    "instanceExist": "该实例标识符已存在",
     "loginFailed": "登录失败",
     "loginTimeout": "登录超时",
     "needLogin": "登录信息超时，需要重新登录",
     "passwordAgain": "两次输入的密码不一致",
     "permission": "权限不足",
     "sameOldPasswd": "请勿与旧密码一致",
+    "server": "服务端错误",
     "unknown": "未知错误",
     "userExist": "该用户名已存在",
     "userFrozen": "当前用户已被冻结",
@@ -28,13 +30,21 @@
   "freeze": "冻结",
   "hello": "你好",
   "holder": {
+    "defaultSafe": "请选择默认安全等级",
+    "identifier": "请输入标识符",
+    "identifierCheck": "标识符只能包含英文字母、数字或_.+-",
+    "ips": "请输入允许访问该实例的IP，留空代表所有",
+    "keeper": "请选择密钥保管器",
     "level": "请选择权限等级",
+    "name": "请输入名称",
     "password": "请输入密码",
     "passwordAgain": "请再次输入新密码",
     "username": "请输入用户名"
   },
   "instance": {
     "control": "管理实例",
+    "highSafe": "高安全性",
+    "lowSafe": "低安全性",
     "manageKeys": "管理密钥"
   },
   "label": {
@@ -42,8 +52,9 @@
     "again": "再次输入",
     "createTime": "创建时间",
     "frozen": "冻结",
-    "identifier": "标识",
+    "identifier": "标识符",
     "instance": "实例",
+    "ips": "放行IP",
     "keeper": "密钥保管器",
     "lastIP": "上次登录IP",
     "lastLogin": "上次登录时间",
@@ -61,10 +72,14 @@
   "login": "登录",
   "tip": {
     "confirmDeleteUser": "确定删除该用户？此操作不可逆！",
+    "confirmDestroyInstance": "确定销毁该实例？此操作不可逆！",
+    "confirmDisableInstance": "确定冻结该实例？这将使数据库暂时无法访问此密钥保存实例，但不会删除此实例",
     "confirmDisableUser": "确定禁用该用户？这将一并冻结该用户所有的专属实例",
+    "confirmEnableInstance": "确定启用该实例？",
     "confirmEnableUser": "确定启用该用户？",
     "successChange": "修改成功",
-    "successDelete": "删除成功"
+    "successDelete": "删除成功",
+    "successDestroy": "销毁成功"
   },
   "title": {
     "allIncetance": "所有实例",

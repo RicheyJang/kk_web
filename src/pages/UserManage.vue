@@ -40,7 +40,7 @@
     
   </base-container>
 
-  <!--新增用户表单-->
+  <!--修改权限表单-->
   <el-dialog v-model="setLevelFormVisiable" :title="t('user.setLevel')" width="20vmax">
     <el-form :model="newLevelForm" label-position="left" label-width="auto">
       <el-form-item :label="t('label.level')">
@@ -58,7 +58,7 @@
       </span>
     </template>
   </el-dialog>
-  <!--新增用户表单 over-->
+  <!--修改权限表单 over-->
 
   <!--新增用户表单-->
   <el-dialog v-model="newUserFormVisiable" :title="t('title.newUser')" width="30vmax">

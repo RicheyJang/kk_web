@@ -1,3 +1,5 @@
+import service from "./basic"
+
 export function serverTimeToDisplay(timeStr) {
   if(!timeStr || timeStr.length === 0) {
     return '-'
@@ -7,4 +9,10 @@ export function serverTimeToDisplay(timeStr) {
     return '-'
   }
   return date.toLocaleString()
+}
+
+const MetaInfoURL = "/api/meta"
+
+export function getMetaInfo() {
+  return service.get(MetaInfoURL)
 }
