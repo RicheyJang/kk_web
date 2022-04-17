@@ -29,6 +29,8 @@ export const CodeUserFrozen  = 10005
 export const CodeNeedLogin   = 10006
 export const CodeUserExist   = 10007
 export const CodeInstanceExist = 10008
+export const CodeInstanceFrozen = 10009
+export const CodeKeeperSupport  = 10010
 
 function getMsgByCode(code) {
   switch(code) {
@@ -46,6 +48,10 @@ function getMsgByCode(code) {
       return i18n.global.t('error.userExist')
     case CodeInstanceExist:
       return i18n.global.t('error.instanceExist')
+    case CodeInstanceFrozen:
+      return i18n.global.t('error.instanceFrozen')
+    case CodeKeeperSupport:
+      return i18n.global.t('error.keeperSupport')
     case CodeNeedLogin:
       ElMessageBox.alert(i18n.global.t('error.needLogin'), i18n.global.t('error.loginTimeout'), {
         confirmButtonText: i18n.global.t('confirm'),

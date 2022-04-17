@@ -4,8 +4,8 @@
       {{ currentInstance.length > 0? currentInstance : t('label.instance') }}<el-icon class="el-icon--right"><arrow-down /></el-icon>
     </span>
     <template #dropdown>
-      <el-dropdown-menu @command="handleSelectInstance">
-        <el-dropdown-item v-for="instance in instances" :command="instance"
+      <el-dropdown-menu>
+        <el-dropdown-item v-for="instance in instances" @click="handleSelectInstance(instance)"
                           :class="{'current-instance': instance === currentInstance}">{{instance}}</el-dropdown-item>
         <el-dropdown-item divided @click="handleClickManage">{{t('instance.control')}}</el-dropdown-item>
       </el-dropdown-menu>
