@@ -157,10 +157,10 @@ const newKeyRules = {
 }
 const newKeyForm = reactive({
   id: null,
-  length: 16,
+  length: 32,
   algorithm: '',
   isRotational: false,
-  rotationTime: null,
+  rotationTime: 3600,
 })
 function handleConfirmAddKey() {
   newKeyFormRef.value.validate((valid) => {
