@@ -1,32 +1,127 @@
 {
   "back": "Back",
+  "cancel": "Cancel",
+  "change": "Revise",
   "confirm": "OK",
+  "delete": "Delete",
+  "destroy": "Destroy",
+  "disable": "Disable",
+  "empty": {
+    "default": "No data",
+    "instance": "No instance yet",
+    "key": "No key yet",
+    "user": "No users yet"
+  },
+  "enable": "Enable",
   "error": {
+    "instanceExist": "The instance identifier already exists",
+    "instanceFrozen": "The current instance is being frozen and cannot be operated",
+    "keeperSupport": "This operation is not supported by the current key keeper",
     "loginFailed": "Login failed",
     "loginTimeout": "Login timed out",
     "needLogin": "The login information has timed out and needs to log in again",
+    "passwordAgain": "The two entered passwords do not match",
     "permission": "Insufficient permissions",
+    "sameOldPasswd": "Do not be same with the old password",
+    "server": "server error",
     "unknown": "unknown mistake",
+    "userExist": "The username already exists",
     "userFrozen": "The user has been frozen",
     "wrongPasswd": "Wrong user name or password"
   },
+  "freeze": "Freeze",
   "hello": "Hello",
   "holder": {
+    "algorithm": "Please select an encryption algorithm",
+    "defaultSafe": "Please select the default security level",
+    "id": "Please enter ID",
+    "identifier": "Please enter an identifier",
+    "identifierCheck": "Identifiers can only contain English letters, numbers or _. -",
+    "ips": "Please enter the IP that is allowed to access the instance, leave blank for all",
+    "isRotational": "Please choose whether to rotate",
+    "keeper": "Please select a key keeper",
+    "keyLength": "Please select a key length",
+    "level": "Please select a permission level",
+    "name": "Please enter a name",
     "password": "Please enter password",
+    "passwordAgain": "Please enter new password again",
+    "rotationRightTime": "Please enter the correct rotation interval",
+    "rotationTime": "Please enter the rotation interval",
     "username": "Please enter username"
   },
   "instance": {
-    "control": "Manage Instance"
+    "control": "Manage Instance",
+    "highSafe": "High security",
+    "lowSafe": "Low security",
+    "manageKeys": "Manage keys"
+  },
+  "keys": {
+    "destroy": "Destroy",
+    "rotational": "Rotational",
+    "unRotational": "Not rotational"
   },
   "label": {
-    "password": "password",
-    "username": "username"
+    "IPs": "Release IP",
+    "again": "Re-enter",
+    "algorithm": "Encryption Algorithm",
+    "createTime": "Creation Time",
+    "frozen": "Freeze",
+    "identifier": "Identifier",
+    "instance": "Instance",
+    "ips": "Release IP",
+    "isRotational": "Rotate",
+    "keeper": "key Keeper",
+    "keyLength": "key Length",
+    "lastIP": "Last Login IP",
+    "lastLogin": "Last Login Time",
+    "length": "Length",
+    "level": "Permission",
+    "newPassword": "New Password",
+    "normal": "Normal",
+    "oldPassword": "Old Password",
+    "operation": "Operation",
+    "owner": "Manager",
+    "ownerID": "Manager IDs",
+    "password": "Password",
+    "rotateInterval": "Rotation Interval",
+    "rotateTime": "Next Rotation Time",
+    "safeLevel": "Default Security Level",
+    "status": "Status",
+    "username": "Username",
+    "version": "Current Version"
   },
   "login": "Login",
+  "seconds": "Seconds",
+  "tip": {
+    "confirmDeleteUser": "Are you sure you want to delete this user? \nThis operation is irreversible!",
+    "confirmDestroyInstance": "Are you sure you want to destroy this instance? \nThis operation is irreversible!",
+    "confirmDestroyKey": "Are you sure you want to destroy this key? \nThis operation is irreversible!",
+    "confirmDisableInstance": "Are you sure you want to freeze this instance? \nThis will make this key save instance temporarily inaccessible to the database, but will not delete this instance",
+    "confirmDisableUser": "Are you sure you want to disable this user? \nThis will also freeze all dedicated instances for that user",
+    "confirmEnableInstance": "Are you sure you want to enable this instance?",
+    "confirmEnableUser": "Are you sure you want to enable this user?",
+    "successChange": "Successfully Modified",
+    "successDelete": "Successfully Deleted",
+    "successDestroy": "Successfully Destroyed"
+  },
   "title": {
-    "allKey": "All Keys"
+    "allIncetance": "All Instances",
+    "allKey": "All Keys",
+    "allUser": "All users",
+    "changePasswd": "Change Password",
+    "newKey": "Distribute New Keys",
+    "newUser": "New User",
+    "warning": "Warning"
   },
   "user": {
-    "name": "user"
+    "admin": "Administrator",
+    "control": "User Management",
+    "general": "General User",
+    "logout": "Log out",
+    "name": "Username",
+    "password": "Change Password",
+    "resetPassword": "Reset Password",
+    "root": "root",
+    "setLevel": "Setting Permissions"
   }
 }
