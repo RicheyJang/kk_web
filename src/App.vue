@@ -5,6 +5,7 @@
         <component :is="Component" />
       </transition>
     </router-view>
+    <div class="global-footer">Key Keeper | By RicheyJang</div>
   </el-config-provider>
 </template>
 
@@ -66,6 +67,20 @@ html, body {
 .el-dialog__body {
   display: flex;
   justify-content: center;
+}
+
+.global-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background-color: white;
+
+  border-top: #e0e0e0 solid 1px;
+  color: #7c8e9e;
+  text-align: center;
+  line-height: 34px;
+  font-size: 14px;
 }
 
 /* 动画过渡 */

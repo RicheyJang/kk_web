@@ -70,7 +70,7 @@
       </span>
     </template>
   </el-dialog>
-  <!--新增实例表单 over-->
+  <!--新增密钥表单 over-->
 </div>
 </template>
 
@@ -93,6 +93,8 @@ const { t } = useI18n()
 
 const loading = ref(false)
 const title = computed(() => {
+  if(route.params.hasOwnProperty('instance') && route.params.instance.length != 0)
+    return route.params.instance + t('ps') + t('title.allKey')
   return t('title.allKey')
 })
 const identifier = ref('')

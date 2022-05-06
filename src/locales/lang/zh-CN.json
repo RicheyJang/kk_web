@@ -91,6 +91,7 @@
     "version": "当前版本"
   },
   "login": "登录",
+  "ps": "的",
   "seconds": "秒",
   "tip": {
     "confirmDeleteUser": "确定删除该用户？此操作不可逆！",
@@ -109,6 +110,7 @@
     "allKey": "所有密钥",
     "allUser": "所有用户",
     "changePasswd": "修改密码",
+    "newInstance": "新建实例",
     "newKey": "分发新密钥",
     "newUser": "新建用户",
     "warning": "警告"

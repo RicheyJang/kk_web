@@ -7,7 +7,7 @@
       status-icon
       ref="loginForm"
       label-position="left"
-      label-width="70px">
+      label-width="80px">
         <el-form-item :label="t('label.username')" prop="username" >
           <el-input type="text"
               v-model="FormDatas.username"

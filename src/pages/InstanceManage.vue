@@ -43,7 +43,7 @@
   </base-container>
 
   <!--新增实例表单-->
-  <el-dialog v-model="newInstanceVisiable" :title="t('title.newUser')" width="30vmax">
+  <el-dialog v-model="newInstanceVisiable" :title="t('title.newInstance')" width="30vmax">
     <el-form :model="newInstanceForm" :rules="newInstanceRules" ref="newInstanceFormRef"
      label-position="left" label-width="auto" style="width: 70%; margin: 0, auto">
       <el-form-item :label="t('label.identifier')" prop="identifier">
