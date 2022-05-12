@@ -1,7 +1,9 @@
-# Vue 3 + Vite
+# Key Keeper Web
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+[Key Keeper](https://github.com/RicheyJang/key_keeper) system management front-end Web interface implementation, based on Vue 3.
 
-## Recommended IDE Setup
+## Install
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+All the compiled front-end files have been packaged into the released distribution of [Key Keeper](https://github.com/RicheyJang/key_keeper/releases). 
+
+Run Key Keeper, and directly visit https://localhost:7710. No installation is necessary.
